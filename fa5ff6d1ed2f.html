@@ -1,0 +1,580 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>用hexo搭建自己的博客 - 让我摆烂</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="前言
+我花了一周时间捣鼓hexo的博客，目前看起来还...">
+  <meta name="author" content="Civil">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/panda-syntax-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://raw.githubusercontent.com/civil-why/r-pic/main/alipay.jpg',
+        wechat: 'https://raw.githubusercontent.com/civil-why/r-pic/main/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '死道友不死贫道',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: false,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: 'search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 7.0.0-rc2"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">用hexo搭建自己的博客</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/source/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">用hexo搭建自己的博客</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>七月 25, 2023</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>3648</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <h1 id="前言">前言</h1>
+<p>我花了一周时间捣鼓hexo的博客，目前看起来还算正常。这篇文章简单谈谈我遇到的坑点和我的建议。</p>
+<h1 id="搭建博客的准备工作">搭建博客的准备工作</h1>
+<ul>
+<li>一个GitHub账号</li>
+<li>git、hexo、node.js配置</li>
+<li>强大的markdown编辑器、json编辑器和yml编辑器</li>
+<li>永恒的耐心</li>
+</ul>
+<h1 id="开始搭建博客">开始搭建博客</h1>
+<h2 id="注册github">注册GitHub</h2>
+<p>使用邮箱注册 <a href="www.github.com">GitHub</a>
+账户，选择免费账户（Free），并完成邮件验证。</p>
+<h2 id="搭建环境">搭建环境</h2>
+<p>建议优先下载vscode</p>
+<p>下载 Node.js 和 Git 程序并安装，一路点 “下一步”
+按默认配置完成安装。</p>
+<h3 id="git环境搭建">git环境搭建：</h3>
+<p>前往官网下载<a href="https://git-scm.com/downloads">Git</a></p>
+<p>可能遇到的问题：</p>
+<ul>
+<li>git需要设置启动方式，建议使用vscode启动。（如果你会vim那当我没说）点这里-&gt;<a
+href="https://blog.csdn.net/mukes/article/details/115693833">git安装教程</a></li>
+</ul>
+<h1 id="node.js环境搭建">node.js环境搭建：</h1>
+<p>前往官网下载<a href="https://nodejs.org/zh-cn">node.js</a></p>
+<p><a
+href="https://blog.csdn.net/WHF__/article/details/129362462">node.js安装教程</a></p>
+<p><strong>hexo基于node.js搭建,搭建过程中会使用到的npm同样包含在node.js中</strong></p>
+<p>安装完成后，Win+R 输入 cmd 并打开，依次输入 node -v、npm -v 和 git
+--version 并回车，如下图出现程序版本号即可。 <img 
+ class="lazyload" data-original="data:image/jpeg;base64,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" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" 
+title="版本" /></p>
+<p>配置安装完成后，同样需要一个支持markdown的编辑器，这里推荐vscode。</p>
+<p><strong><em><a
+href="https://code.visualstudio.com/">vscode</a>极其强大，支持markdown、json和yml，同时满足所有需求！</em></strong></p>
+<h2 id="使用ssh链接github和本地git">使用SSH链接github和本地git</h2>
+<p>注册完成后，在本地（右键，打开gitbash）设置<strong>用户名和邮箱</strong></p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs autoit">git config --<span class="hljs-keyword">global</span> user.name <span class="hljs-string">&quot;张三&quot;</span> <span class="hljs-meta"># 当然是改成自己的用户名了</span><br>git config --<span class="hljs-keyword">global</span> user.email <span class="hljs-string">&quot;114514@163.com&quot;</span> <span class="hljs-meta"># 同理改成自己的邮箱</span><br></code></pre></td></tr></table></figure>
+<h3 id="创建ssh密钥">创建SSH密钥</h3>
+<p>输入 <code>ssh-keygen -t rsa -C "GitHub 邮箱"</code>
+然后一路回车。</p>
+<h3 id="添加密匙">添加密匙</h3>
+<p>进入 [C:.ssh] 目录（要勾选显示“隐藏的项目”），用记事本打开公钥
+id_rsa.pub 文件并复制里面的内容。</p>
+<p>登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击
+New SSH key。</p>
+<p>Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击 Add SSH
+key 完成添加。</p>
+<figure>
+<img  
+ class="lazyload" data-original="https://pic1.zhimg.com/80/v2-9125065afd24332d7cd84feb6a350730_720w.webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" 
+  /><span class="image-caption">图源知乎</span>
+<figcaption aria-hidden="true">图源知乎</figcaption>
+</figure>
+<h3 id="验证连接">验证连接</h3>
+<p>打开 Git Bash，输入 <code>ssh -T git@github.com</code> 出现 “Are you
+sure……”，输入 yes 回车确认。 <img  
+ class="lazyload" data-original="https://pic3.zhimg.com/80/v2-b4c7524a2451f4ab42f9c22ea3c7b6be_720w.webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" 
+  /><span class="image-caption">图源知乎</span></p>
+<p>显示 “Hi xxx! You've successfully……” 即连接成功。</p>
+<h2 id="创建-github-pages-仓库">创建 Github Pages 仓库</h2>
+<p>GitHub 主页右上角加号 -&gt; New repository：</p>
+<ul>
+<li>Repository name 中输入
+<code>用户名.github.io</code>（用户名三个字换成你github的名字）</li>
+<li>勾选 “Initialize this repository with a README”</li>
+<li>Description 选填</li>
+</ul>
+<p>务必注意 <strong>.github.io</strong>不要漏掉</p>
+<p>填好后点击 Create repository 创建。</p>
+<h2 id="本地安装-hexo-博客程序">本地安装 Hexo 博客程序</h2>
+<p>到这里已经完成一半了，现在搭建本地的hexo程序。</p>
+<p>首先前往除开c盘外的任何一个磁盘，新建文件夹，建议命名为<code>blog</code></p>
+<p>打开该文件夹，右键打开gitbash，输入 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">npm install -g hexo-<span class="hljs-keyword">cli</span><br></code></pre></td></tr></table></figure>
+使用npm一键安装所需要的hexo博客程序（npm已经包含在node.js里安装好啦）</p>
+<p><strong>安装时间有点久（真的很慢！），界面也没任何反应，耐心等待。</strong></p>
+<p><strong>安装好后</strong>输入 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmake">hexo init      <span class="hljs-comment"># 初始化</span><br>npm <span class="hljs-keyword">install</span>    <span class="hljs-comment"># 安装组件</span><br></code></pre></td></tr></table></figure>
+以初始化hexo并安装必备组件</p>
+<p>完成后依次输入下面命令，启动本地服务器进行预览： <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">hexo</span> g   <span class="hljs-comment"># 生成页面</span><br>hexo s   <span class="hljs-comment"># 启动预览</span><br></code></pre></td></tr></table></figure> 访问
+<a href="http://localhost:4000">http://localhost:4000</a>，出现 Hexo
+默认页面，本地博客安装成功！</p>
+<figure>
+<img  
+ class="lazyload" data-original="https://pic4.zhimg.com/80/v2-1c3baeecf1ef3bec5c8ef3f14639f68b_720w.webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" 
+  /><span class="image-caption">默认页面</span>
+<figcaption aria-hidden="true">默认页面</figcaption>
+</figure>
+<p>如果出现页面加载不出来，可能是端口被占用了。Ctrl+C 关闭服务器，运行
+hexo server -p 5000 更改端口号后重试。</p>
+<h2 id="同步本地博客与github上的博客">同步本地博客与github上的博客</h2>
+<p>首先安装 hexo-deployer-git，使其能够在网上被访问：</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs applescript">npm install hexo-deployer-git <span class="hljs-comment">--save</span><br><span class="hljs-comment"># 安装命令如上</span><br></code></pre></td></tr></table></figure>
+<p>打开/blog文件夹（你自己创建那个）找到<code>_config.yml文件</code>
+，修改 <strong>Deployment部分</strong> <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">  type:</span> git<br><span class="hljs-symbol">  repository:</span> git@github.com:用户名/用户名.github.io.git<br><span class="hljs-symbol">  branch:</span> main<br><span class="hljs-meta"># 修改后长这样</span><br></code></pre></td></tr></table></figure> 完成后运行
+<code>hexo d</code> 将网站上传部署到 GitHub Pages。</p>
+<p>完成！这时访问我们的 GitHub 域名
+<code>https://用户名.github.io</code> 就可以看到 Hexo 网站了。</p>
+<h1 id="主题搭建">主题搭建</h1>
+<p>默认博客不好看？来看看各式各样的<a
+href="https://hexo.io/themes/">hexo主题</a></p>
+<h2 id="主题推荐">主题推荐</h2>
+<p>这里简单推荐几个主题</p>
+<ul>
+<li><p>我正在使用的主题:</p>
+<p><a href="https://www.izhaoo.com/">zhaoo</a></p>
+<p>优点：简约，干净，使用方便</p></li>
+<li><p>经典的博客主题：</p>
+<p><a href="https://theme-next.js.org/">NexT</a></p>
+<p>优点：功能强大，经典耐用</p></li>
+<li><p>二次元的主题：</p>
+<p><a
+href="https://arknights.theme.hexo.yue.zone/">卧槽，舟</a></p></li>
+</ul>
+<p>其他的主题也可以前往<a
+href="https://hexo.io/themes/">hexo主题官网</a>搜索</p>
+<h2 id="主题搭建注意事项">主题搭建注意事项</h2>
+<p>一般来说，前往主题页都是有主题搭建的教程的,而且各个主题搭建过程大同小异，我这里简单以zhaoo为例子讲一下</p>
+<p>支持一下原作者<a
+href="https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/">zhaoo</a></p>
+<p><strong><em>注意！博客配置和主题配置并不相同！</em></strong></p>
+<blockquote>
+<p>约定：无特殊说明时，文中“博客配置”指 /_config.yml，“主题配置”指
+/theme/hexo-theme-zhaoo/_config.yml，单独说配置时特指为“主题配置”。</p>
+</blockquote>
+<h3 id="安装主题文件">安装主题文件</h3>
+<p>方式有以下两种</p>
+<ul>
+<li><p>利用gitbash安装当前主题（以zhaoo为例）</p>
+<p>打开之前新建的文件夹（blog），右键进入gitbash。
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">$ git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/izhaoo/</span>hexo-theme-zhaoo.git themes/zhaoo<br><span class="hljs-comment"># 具体安装哪个主题自己决定，这个是zhaoo主题的安装方式</span><br></code></pre></td></tr></table></figure></p></li>
+<li><p>直接前往github下载主题文件安装包</p>
+<p>将主题文件安装在blog/themes下，并将名称从<code>hexo-theme-zhaoo-master</code>改为<code>zhaoo</code></p></li>
+</ul>
+<h3 id="hexo博客配置">hexo博客配置</h3>
+<p>修改 Hexo 根目录下的 <code>_config.yml</code> 文件启用
+<code>zhaoo</code> 主题：</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">theme:</span> zhaoo<br></code></pre></td></tr></table></figure>
+<p>回到<code>gitbash</code>，启动<code>Hexo</code>服务器预览：</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">$ hexo clean <span class="hljs-meta">&amp;&amp; hexo s</span><br></code></pre></td></tr></table></figure>
+<p>和<a
+href="https://www.izhaoo.com/">原作者的主页</a>一样就说明成功</p>
+<p>接下来对主题内容的适配，主要围绕主题配置进行，参考<a
+href="https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/">这篇文章</a>即可</p>
+<h1 id="配置latex选做">配置LaTeX（选做）</h1>
+<blockquote>
+<p>latex适配和主题无关，切记切记</p>
+</blockquote>
+<span class="math display">\[\begin{split} LaTeX \end{split}\]</span>
+<p>/LaTeX</p>
+<p>LaTeX适配是我这几天最痛苦的事情，hexo本身并不支持LaTeX，需要自行修改LaTeX设置。</p>
+<p>我的建议是使用pandoc进行配置，当然你如果自己稍微了解，可以自行使用KaTeX进行配置。</p>
+<h2 id="pandoc环境搭建">pandoc环境搭建</h2>
+<ul>
+<li>前往<a
+href="https://pandoc.org/">pandoc官网</a>下载pandoc，直接下一步到底并安装，<strong>注意安装完要重启电脑</strong>。</li>
+<li>自带的hexo-renderer-marked是不支持LaTeX的，在gitbash中运行以下代码卸载hexo-renderer-marked，并下载支持pandoc的hexo-renderer-pandoc。</li>
+</ul>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ada">npm uninstall hexo-renderer-marked <span class="hljs-comment">--save</span><br>npm install hexo-renderer-pandoc <span class="hljs-comment">--save</span><br></code></pre></td></tr></table></figure>
+<p>可以通过<code>npm ls --depth 0</code>命令查看hexo的配置</p>
+<h1 id="参考资料">参考资料</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/60578464">使用 Hexo+GitHub
+搭建个人免费博客教程（小白向）</a></p>
+<p><a href="https://hexo.io/zh-cn/docs/">hexo官网</a></p>
+<p><a href="https://www.izhaoo.com/">zhaoo的主页</a></p>
+<p><a href="https://blog.csdn.net/mukes/article/details/115693833">Git
+详细安装教程（详解 Git 安装过程的每一个步骤）</a></p>
+<p><a
+href="https://blog.csdn.net/WHF__/article/details/129362462">Node.js下载安装及环境配置教程【超详细】</a></p>
+<p><a
+href="https://jdhao.github.io/2017/10/06/hexo-markdown-latex-equation/#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95">Hexo
+书写 LaTeX 公式时的一些问题及解决方法</a></p>
+<p><a
+href="https://www.jianshu.com/p/a9f26f4cd4e6">Hexo中的LaTex公式渲染问题</a></p>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>Civil</li>
+    <li><strong>本文链接：</strong><a href="http://civil-why.github.io/fa5ff6d1ed2f.html" title="http:&#x2F;&#x2F;civil-why.github.io&#x2F;fa5ff6d1ed2f.html">http:&#x2F;&#x2F;civil-why.github.io&#x2F;fa5ff6d1ed2f.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://raw.githubusercontent.com/civil-why/r-pic/main/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/87b2b3ed0f70.html"><i class="iconfont iconleft"></i>信息安全数学基础</a>
+    <a href="/c5fc7ab56e18.html">latex测试<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">搭建博客的准备工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2"><span class="toc-text">开始搭建博客</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8Cgithub"><span class="toc-text">注册GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">git环境搭建：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#node.js%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">node.js环境搭建：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8ssh%E9%93%BE%E6%8E%A5github%E5%92%8C%E6%9C%AC%E5%9C%B0git"><span class="toc-text">使用SSH链接github和本地git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAssh%E5%AF%86%E9%92%A5"><span class="toc-text">创建SSH密钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%AF%86%E5%8C%99"><span class="toc-text">添加密匙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E8%BF%9E%E6%8E%A5"><span class="toc-text">验证连接</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-github-pages-%E4%BB%93%E5%BA%93"><span class="toc-text">创建 Github Pages 仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85-hexo-%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F"><span class="toc-text">本地安装 Hexo 博客程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E4%B8%8Egithub%E4%B8%8A%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="toc-text">同步本地博客与github上的博客</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA"><span class="toc-text">主题搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90"><span class="toc-text">主题推荐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">主题搭建注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98%E6%96%87%E4%BB%B6"><span class="toc-text">安装主题文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE"><span class="toc-text">hexo博客配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E7%BD%AElatex%E9%80%89%E5%81%9A"><span class="toc-text">配置LaTeX（选做）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#pandoc%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">pandoc环境搭建</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="failed to QQ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont   "></i>
+      </a><a 
+        href="failed to WeChat "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont   "></i>
+      </a><a 
+        href="https://www.bilibili.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont   "></i>
+      </a><a 
+        href="https://github.com/civil-why "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:973992490@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
