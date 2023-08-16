@@ -199,7 +199,7 @@
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>七月 25, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>3640</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>3683</span>
     </div>
   </div>
 </section>
@@ -244,10 +244,9 @@ title="版本" /></p>
 href="https://code.visualstudio.com/">vscode</a>极其强大，支持markdown、json和yml，同时满足所有需求！</em></strong></p>
 <h2 id="使用ssh链接github和本地git">使用SSH链接github和本地git</h2>
 <p>注册完成后，在本地（右键，打开gitbash）设置<strong>用户名和邮箱</strong></p>
-<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs autoit">git config --<span class="hljs-keyword">global</span> user.name <span class="hljs-string">&quot;张三&quot;</span> <span class="hljs-meta"># 当然是改成自己的用户名了</span><br>git config --<span class="hljs-keyword">global</span> user.email <span class="hljs-string">&quot;114514@163.com&quot;</span> <span class="hljs-meta"># 同理改成自己的邮箱</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs autoit">git config --<span class="hljs-keyword">global</span> user.name <span class="hljs-string">&quot;张三&quot;</span> <span class="hljs-meta"># 当然是改成自己的用户名了</span><br>git config --<span class="hljs-keyword">global</span> user.email <span class="hljs-string">&quot;114514@163.com&quot;</span> <span class="hljs-meta"># 同理改成自己注册GitHub的邮箱</span><br></code></pre></td></tr></table></figure>
 <h3 id="创建ssh密钥">创建SSH密钥</h3>
-<p>输入 <code>ssh-keygen -t rsa -C "GitHub 邮箱"</code>
-然后一路回车。</p>
+<p>输入 <figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs perl">ssh-keygen -t rsa -C <span class="hljs-string">&quot;1919810@163.com&quot;</span><br><span class="hljs-comment"># 邮箱填你注册Github时的邮箱</span><br></code></pre></td></tr></table></figure> 然后一路回车。</p>
 <h3 id="添加密匙">添加密匙</h3>
 <p>进入 [C:.ssh] 目录（要勾选显示“隐藏的项目”），用记事本打开公钥
 id_rsa.pub 文件并复制里面的内容。</p>
