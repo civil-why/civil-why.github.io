@@ -180,26 +180,20 @@ vscode没有自动保存，修改了任何部分，<strong><em>特别是deployme
     <title>cinta_note1</title>
     <url>/96971c6a6fba.html</url>
     <content><![CDATA[<h1 id="chapter-1">Chapter 1</h1>
-<ul>
-<li>we focus on these topics:
-<ul>
-<li>初等数论</li>
-<li>抽象代数</li>
-<li>算法</li>
-</ul></li>
-<li>本课程为以下专题打基础
-<ul>
-<li>分组密码算法：AES等</li>
-<li>公钥密码算法：Diffie—Hellman、RSA、ECC等</li>
-<li>后量子密码算法：NTRU等</li>
-</ul></li>
-</ul>
+<h2 id="前导语">前导语</h2>
+<h3 id="we-focus-on-these-topics">we focus on these topics:</h3>
+<pre><code>* 初等数论
+* 抽象代数
+* 算法</code></pre>
+<h3 id="本课程为以下专题打基础">本课程为以下专题打基础</h3>
+<pre><code>* 分组密码算法：AES等
+* 公钥密码算法：Diffie—Hellman、RSA、ECC等
+* 后量子密码算法：NTRU等</code></pre>
 <blockquote>
 <p>课程所涉及内容不仅仅局限于以上算法。</p>
 </blockquote>
-<ul>
-<li></li>
-</ul>
+<h2 id="二进制">二进制</h2>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b==<span class="number">0</span>) <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">add</span>(a^b,(a&amp;b)&lt;&lt;<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 好好好，这么做加法是吧</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>cintanote</category>

@@ -12,8 +12,8 @@
   <meta name="google" content="notranslate" />
   
   <meta name="description" content="Chapter 1
-
-we focus on th...">
+前导语
+we focus on...">
   <meta name="author" content="Civil">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -200,7 +200,7 @@ we focus on th...">
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>九月 07, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>169</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>287</span>
     </div>
   </div>
 </section>
@@ -208,26 +208,20 @@ we focus on th...">
       <section class="content">
         
         <h1 id="chapter-1">Chapter 1</h1>
-<ul>
-<li>we focus on these topics:
-<ul>
-<li>初等数论</li>
-<li>抽象代数</li>
-<li>算法</li>
-</ul></li>
-<li>本课程为以下专题打基础
-<ul>
-<li>分组密码算法：AES等</li>
-<li>公钥密码算法：Diffie—Hellman、RSA、ECC等</li>
-<li>后量子密码算法：NTRU等</li>
-</ul></li>
-</ul>
+<h2 id="前导语">前导语</h2>
+<h3 id="we-focus-on-these-topics">we focus on these topics:</h3>
+<pre><code>* 初等数论
+* 抽象代数
+* 算法</code></pre>
+<h3 id="本课程为以下专题打基础">本课程为以下专题打基础</h3>
+<pre><code>* 分组密码算法：AES等
+* 公钥密码算法：Diffie—Hellman、RSA、ECC等
+* 后量子密码算法：NTRU等</code></pre>
 <blockquote>
 <p>课程所涉及内容不仅仅局限于以上算法。</p>
 </blockquote>
-<ul>
-<li></li>
-</ul>
+<h2 id="二进制">二进制</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b==<span class="number">0</span>) <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">add</span>(a^b,(a&amp;b)&lt;&lt;<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 好好好，这么做加法是吧</span></span><br></pre></td></tr></table></figure>
 
       </section>
       <section class="extra">
@@ -270,7 +264,7 @@ we focus on th...">
           
   <aside class="toc-wrap">
     <h3 class="toc-title">文章目录：</h3>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-1"><span class="toc-text">Chapter 1</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#chapter-1"><span class="toc-text">Chapter 1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%AF%BC%E8%AF%AD"><span class="toc-text">前导语</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#we-focus-on-these-topics"><span class="toc-text">we focus on these topics:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E8%AF%BE%E7%A8%8B%E4%B8%BA%E4%BB%A5%E4%B8%8B%E4%B8%93%E9%A2%98%E6%89%93%E5%9F%BA%E7%A1%80"><span class="toc-text">本课程为以下专题打基础</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="toc-text">二进制</span></a></li></ol></li></ol>
   </aside>
 
         
@@ -339,6 +333,22 @@ we focus on th...">
   </div>
 </div>
   
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
