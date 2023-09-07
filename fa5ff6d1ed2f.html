@@ -199,7 +199,7 @@
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>七月 25, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4090</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4097</span>
     </div>
   </div>
 </section>
@@ -288,7 +288,7 @@ sure……”，输入 yes 回车确认。 <img   class="lazyload" data-original
 hexo server -p 5000 更改端口号后重试。</p>
 <p>另外，如果出现未知bug可以先试试</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean # 重置页面</span><br></pre></td></tr></table></figure>
-<p>这个命令仅重置页面</p>
+<p>这个命令仅重置页面，需要重新生成</p>
 <h2 id="同步本地博客与github上的博客">同步本地博客与github上的博客</h2>
 <p>首先安装 hexo-deployer-git，使其能够在网上被访问：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"># 安装命令如上</span><br></pre></td></tr></table></figure>
@@ -486,22 +486,6 @@ vscode没有自动保存，修改了任何部分，<strong><em>特别是deployme
   </div>
 </div>
   
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

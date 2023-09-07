@@ -85,7 +85,7 @@ sure……”，输入 yes 回车确认。 <img src="https://pic3.zhimg.com/80/v
 hexo server -p 5000 更改端口号后重试。</p>
 <p>另外，如果出现未知bug可以先试试</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean # 重置页面</span><br></pre></td></tr></table></figure>
-<p>这个命令仅重置页面</p>
+<p>这个命令仅重置页面，需要重新生成</p>
 <h2 id="同步本地博客与github上的博客">同步本地博客与github上的博客</h2>
 <p>首先安装 hexo-deployer-git，使其能够在网上被访问：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"># 安装命令如上</span><br></pre></td></tr></table></figure>
@@ -175,6 +175,38 @@ hexo server -p 5000 更改端口号后重试。</p>
 vscode没有自动保存，修改了任何部分，<strong><em>特别是deployment</em></strong>一定要记得按下ctrl+s！</p></li>
 </ol>
 ]]></content>
+  </entry>
+  <entry>
+    <title>cinta_note1</title>
+    <url>/96971c6a6fba.html</url>
+    <content><![CDATA[<h1 id="chapter-1">Chapter 1</h1>
+<ul>
+<li>we focus on these topics:
+<ul>
+<li>初等数论</li>
+<li>抽象代数</li>
+<li>算法</li>
+</ul></li>
+<li>本课程为以下专题打基础
+<ul>
+<li>分组密码算法：AES等</li>
+<li>公钥密码算法：Diffie—Hellman、RSA、ECC等</li>
+<li>后量子密码算法：NTRU等</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>课程所涉及内容不仅仅局限于以上算法。</p>
+</blockquote>
+<ul>
+<li></li>
+</ul>
+]]></content>
+      <categories>
+        <category>cintanote</category>
+      </categories>
+      <tags>
+        <tag>cinta</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
