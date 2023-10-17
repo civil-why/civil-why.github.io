@@ -177,6 +177,17 @@ vscode没有自动保存，修改了任何部分，<strong><em>特别是deployme
 ]]></content>
   </entry>
   <entry>
+    <title>cinta-HW2</title>
+    <url>/76b58b08ba10.html</url>
+    <content><![CDATA[<h1 id="编程题">编程题</h1>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Mod_exp</span><span class="hljs-params">(<span class="hljs-type">int</span> a,<span class="hljs-type">int</span> b,<span class="hljs-type">int</span> m=<span class="hljs-number">2147483647</span>)</span><span class="hljs-comment">//出于个人恶趣味把m初始化了，这样就能当pow用了</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> ans=<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">if</span>(a&gt;m) a%=m;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;b;i++)&#123;<br>		ans*=a;<br>		ans%=m;<br>	&#125;<br>    <span class="hljs-keyword">return</span> ans;<br>&#125;<br><span class="hljs-comment">//模指数运算函数</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Mul_Inverse</span><span class="hljs-params">(<span class="hljs-type">int</span> a,<span class="hljs-type">int</span> m)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> ans;<br>	<span class="hljs-type">int</span> r1=<span class="hljs-number">1</span>,r2=<span class="hljs-number">0</span>,s1=<span class="hljs-number">0</span>,s2=<span class="hljs-number">1</span>,q,r,s,a0=a,m0=m;<br>	<span class="hljs-keyword">while</span>(m)&#123;<br>		q=a/m;<br>		<span class="hljs-type">int</span> temp=a;<br>		a=m;<br>		m=temp%m;<br>		r=r1;<br>		r1=r2;<br>		r2=r-q*r2;<br>		s=s1;<br>		s1=s2;<br>		s2=s-q*s2;<br>	&#125;<br>	<span class="hljs-keyword">if</span>(a==<span class="hljs-number">1</span>)&#123;<br>		<span class="hljs-keyword">while</span>(r1&lt;<span class="hljs-number">0</span>) r1+=m0;<br>		ans=r1;<br>		&#125;<br>	<span class="hljs-keyword">else</span> ans=<span class="hljs-number">-1</span>;<br>	<span class="hljs-keyword">return</span> ans;<br>&#125;<br><span class="hljs-comment">//求a模m的乘法逆元</span><br></code></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>cinta</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>cinta-关于模除运算</title>
     <url>/63adb1cacc8c.html</url>
     <content><![CDATA[<h1 id="关于模除运算学同余有感">关于模除运算——学同余有感</h1>
