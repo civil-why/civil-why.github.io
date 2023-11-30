@@ -6,13 +6,15 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>cinta-HW2 - 摸鱼ing</title>
+  <title>cinta第五次作业 - 摸鱼ing</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content="编程题
-1234567891011int Mod_e...">
+  <meta name="description" content="第九章
+
+
+定义映射 MATHJAX-SSR-0...">
   <meta name="author" content="Civil">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -153,7 +155,7 @@
         <i class="iconfont iconsearch j-navbar-search"></i>
       
     </div>
-    <div class="center">cinta-HW2</div>
+    <div class="center">cinta第五次作业</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -195,20 +197,99 @@
     <section class="head">
   <img   class="lazyload" data-original="/images/theme/1641012393033%20.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">cinta-HW2</h1>
+    <h1 class="head-title">cinta第五次作业</h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i>十月 17, 2023</span>
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>十一月 30, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>549</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1033</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        <h1 id="编程题">编程题</h1>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Mod_exp</span><span class="hljs-params">(<span class="hljs-type">int</span> a,<span class="hljs-type">int</span> b,<span class="hljs-type">int</span> m=<span class="hljs-number">2147483647</span>)</span><span class="hljs-comment">//出于个人恶趣味把m初始化了，这样就能当pow用了</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> ans=<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">if</span>(a&gt;m) a%=m;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;b;i++)&#123;<br>		ans*=a;<br>		ans%=m;<br>	&#125;<br>    <span class="hljs-keyword">return</span> ans;<br>&#125;<br><span class="hljs-comment">//模指数运算函数</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Mul_Inverse</span><span class="hljs-params">(<span class="hljs-type">int</span> a,<span class="hljs-type">int</span> m)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> ans;<br>	<span class="hljs-type">int</span> r1=<span class="hljs-number">1</span>,r2=<span class="hljs-number">0</span>,s1=<span class="hljs-number">0</span>,s2=<span class="hljs-number">1</span>,q,r,s,a0=a,m0=m;<br>	<span class="hljs-keyword">while</span>(m)&#123;<br>		q=a/m;<br>		<span class="hljs-type">int</span> temp=a;<br>		a=m;<br>		m=temp%m;<br>		r=r1;<br>		r1=r2;<br>		r2=r-q*r2;<br>		s=s1;<br>		s1=s2;<br>		s2=s-q*s2;<br>	&#125;<br>	<span class="hljs-keyword">if</span>(a==<span class="hljs-number">1</span>)&#123;<br>		<span class="hljs-keyword">while</span>(r1&lt;<span class="hljs-number">0</span>) r1+=m0;<br>		ans=r1;<br>		&#125;<br>	<span class="hljs-keyword">else</span> ans=<span class="hljs-number">-1</span>;<br>	<span class="hljs-keyword">return</span> ans;<br>&#125;<br><span class="hljs-comment">//求a模m的乘法逆元</span><br></code></pre></td></tr></table></figure>
+        <h1 id="第九章">第九章</h1>
+<blockquote>
+<ol start="5" type="1">
+<li>定义映射 MATHJAX-SSR-0为：MATHJAX-SSR-1请证明 ϕ 是一种群同态当且仅当
+G 是阿贝尔群。</li>
+</ol>
+</blockquote>
+<p>证明： MATHJAX-SSR-2 由消去律有MATHJAX-SSR-3,得证G为阿贝尔群。
+MATHJAX-SSR-4 MATHJAX-SSR-5</p>
+<blockquote>
+<p>6.设 MATHJAX-SSR-6是一种群同态。</p>
+<p>请证明：如果 G 是循环群，则 ϕ(G)也是循环群；如 果 G 是交换群，则 ϕ(G)
+也是交换群。</p>
+</blockquote>
+<p>证明:</p>
+<ol type="1">
+<li><p>假设G为循环群</p>
+<p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20.935ex" height="3.509ex" style="vertical-align: -1.171ex;" viewbox="0 -1006.6 9013.7 1510.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\forall a \in G,有a^i=e成立</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMAIN-2200" d="M0 673Q0 684 7 689T20 694Q32 694 38 680T82 567L126 451H430L473 566Q483 593 494 622T512 668T519 685Q524 694 538 694Q556 692 556 674Q556 670 426 329T293 -15Q288 -22 278 -22T263 -15Q260 -11 131 328T0 673ZM414 410Q414 411 278 411T142 410L278 55L414 410Z"/>
+<path stroke-width="1" id="E1-MJMATHI-61" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"/>
+<path stroke-width="1" id="E1-MJMAIN-2208" d="M84 250Q84 372 166 450T360 539Q361 539 377 539T419 540T469 540H568Q583 532 583 520Q583 511 570 501L466 500Q355 499 329 494Q280 482 242 458T183 409T147 354T129 306T124 272V270H568Q583 262 583 250T568 230H124V228Q124 207 134 177T167 112T231 48T328 7Q355 1 466 0H570Q583 -10 583 -20Q583 -32 568 -40H471Q464 -40 446 -40T417 -41Q262 -41 172 45Q84 127 84 250Z"/>
+<path stroke-width="1" id="E1-MJMATHI-47" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q492 659 471 656T418 643T357 615T294 567T236 496T189 394T158 260Q156 242 156 221Q156 173 170 136T206 79T256 45T308 28T353 24Q407 24 452 47T514 106Q517 114 529 161T541 214Q541 222 528 224T468 227H431Q425 233 425 235T427 254Q431 267 437 273H454Q494 271 594 271Q634 271 659 271T695 272T707 272Q721 272 721 263Q721 261 719 249Q714 230 709 228Q706 227 694 227Q674 227 653 224Q646 221 643 215T629 164Q620 131 614 108Q589 6 586 3Q584 1 581 1Q571 1 553 21T530 52Q530 53 528 52T522 47Q448 -22 322 -22Q201 -22 126 55T50 252Z"/>
+<path stroke-width="1" id="E1-MJMAIN-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"/>
+<path stroke-width="1" id="E1-MJMATHI-69" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"/>
+<path stroke-width="1" id="E1-MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"/>
+<path stroke-width="1" id="E1-MJMATHI-65" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"/>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMAIN-2200" x="0" y="0"/>
+ <use xlink:href="#E1-MJMATHI-61" x="556" y="0"/>
+ <use xlink:href="#E1-MJMAIN-2208" x="1363" y="0"/>
+ <use xlink:href="#E1-MJMATHI-47" x="2309" y="0"/>
+ <use xlink:href="#E1-MJMAIN-2C" x="3095" y="0"/>
+<g transform="translate(3540,0)">
+<text font-family="monospace" stroke="none" transform="scale(71.759) matrix(1 0 0 -1 0 0)">有</text>
+</g>
+<g transform="translate(4473,0)">
+ <use xlink:href="#E1-MJMATHI-61" x="0" y="0"/>
+ <use transform="scale(0.707)" xlink:href="#E1-MJMATHI-69" x="748" y="583"/>
+</g>
+ <use xlink:href="#E1-MJMAIN-3D" x="5625" y="0"/>
+ <use xlink:href="#E1-MJMATHI-65" x="6681" y="0"/>
+<g transform="translate(7147,0)">
+<text font-family="monospace" stroke="none" transform="scale(71.759) matrix(1 0 0 -1 0 0)">成</text>
+</g>
+<g transform="translate(8080,0)">
+<text font-family="monospace" stroke="none" transform="scale(71.759) matrix(1 0 0 -1 0 0)">立</text>
+</g>
+</g>
+</svg> MATHJAX-SSR-8 故有 MATHJAX-SSR-9
+MATHJAX-SSR-10</p></li>
+<li><p>假设G为交换群 MATHJAX-SSR-11 MATHJAX-SSR-12 故有 MATHJAX-SSR-13
+则 MATHJAX-SSR-14</p></li>
+</ol>
+<blockquote>
+<ol start="7" type="1">
+<li>证明：如果 H 是群 G 上指标为 2 的子群，则 H 是 G 的正规子群。</li>
+</ol>
+</blockquote>
+<p>即MATHJAX-SSR-15 $\exist g \in G$ 1. 假设g在H中 MATHJAX-SSR-17
+由封闭性易得 MATHJAX-SSR-18 则MATHJAX-SSR-19</p>
+<ol start="2" type="1">
+<li>假设g不在H中，则g必然在G-H中，由H是群G上指标为2的子群，故：
+MATHJAX-SSR-20 则MATHJAX-SSR-21</li>
+</ol>
+<p>综上，H 是 G 的正规子群 &gt;8. 给定任意群 G，H 是群 G
+的正规子群。请证明，如果群 G 是阿贝尔群，则商群 G/H也是阿贝尔群。</p>
+<p>证明：</p>
+<p>已知H为G的正规子群，设G/H的阶为n。 MATHJAX-SSR-22 MATHJAX-SSR-23
+H为G的正规子群，则商群G/H中任取aH，bH MATHJAX-SSR-24 由封闭性有
+MATHJAX-SSR-25</p>
+<p>故则商群 G/H也是阿贝尔群。</p>
+<blockquote>
+<ol start="9" type="1">
+<li>给定任意群 G，H 是群 G 的正规子群。请证明，如果群 G 是循环群，则商群
+G/H也是循环群。</li>
+</ol>
+</blockquote>
+<p>证明: 已知G为循环群，则 $\forall a\in G,\exist i,a^i=e$ MATHJAX-SSR-27</p>
+<p>由封闭性有 MATHJAX-SSR-28 故商群 G/H也是循环群</p>
 
       </section>
       <section class="extra">
@@ -216,7 +297,7 @@
           <ul class="copyright">
   
     <li><strong>本文作者：</strong>Civil</li>
-    <li><strong>本文链接：</strong><a href="http://civil-why.github.io/76b58b08ba10.html" title="http:&#x2F;&#x2F;civil-why.github.io&#x2F;76b58b08ba10.html">http:&#x2F;&#x2F;civil-why.github.io&#x2F;76b58b08ba10.html</a></li>
+    <li><strong>本文链接：</strong><a href="http://civil-why.github.io/50ed22dcd6c7.html" title="http:&#x2F;&#x2F;civil-why.github.io&#x2F;50ed22dcd6c7.html">http:&#x2F;&#x2F;civil-why.github.io&#x2F;50ed22dcd6c7.html</a></li>
     <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
   
 </ul>
@@ -227,8 +308,8 @@
 
         
   <nav class="nav">
-    <a href="/50ed22dcd6c7.html"><i class="iconfont iconleft"></i>cinta第五次作业</a>
-    <a href="/63adb1cacc8c.html">cinta-关于模除运算<i class="iconfont iconright"></i></a>
+    <a></a>
+    <a href="/76b58b08ba10.html">cinta-HW2<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
@@ -241,7 +322,7 @@
           
   <aside class="toc-wrap">
     <h3 class="toc-title">文章目录：</h3>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E9%A2%98"><span class="toc-text">编程题</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0"><span class="toc-text">第九章</span></a></li></ol>
   </aside>
 
         
