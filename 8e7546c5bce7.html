@@ -211,20 +211,20 @@
         <h1 id="第十章">第十章</h1>
 <blockquote>
 <ol type="1">
-<li>运用 CRT 求解： MATHJAX-SSR-12 MATHJAX-SSR-13</li>
+<li>运用 CRT 求解： MATHJAX-SSR-36 MATHJAX-SSR-37</li>
 </ol>
 </blockquote>
-<p>解：易得 MATHJAX-SSR-14</p>
-<p>由egcd可得 MATHJAX-SSR-15</p>
-<p>由CRT易得，MATHJAX-SSR-16</p>
+<p>解：易得 MATHJAX-SSR-38</p>
+<p>由egcd可得 MATHJAX-SSR-39</p>
+<p>由CRT易得，MATHJAX-SSR-40</p>
 <p>故x=41</p>
 <blockquote>
 <ol start="2" type="1">
-<li>运用 CRT 求解： MATHJAX-SSR-17 MATHJAX-SSR-18 MATHJAX-SSR-19
-MATHJAX-SSR-20</li>
+<li>运用 CRT 求解： MATHJAX-SSR-41 MATHJAX-SSR-42 MATHJAX-SSR-43
+MATHJAX-SSR-44</li>
 </ol>
 </blockquote>
-<p>解：易得 MATHJAX-SSR-21 MATHJAX-SSR-22</p>
+<p>解：易得 MATHJAX-SSR-45 MATHJAX-SSR-46</p>
 <p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="26.524ex" height="2.509ex" style="vertical-align: -0.671ex;" viewbox="0 -791.3 11420.1 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">P=p_1\cdot p_2\cdot p_3\cdot p_4=3465</title>
 <defs aria-hidden="true">
@@ -324,18 +324,18 @@ MATHJAX-SSR-20</li>
 </g>
 </g>
 </svg></p>
-<p>则： MATHJAX-SSR-25</p>
-<p>由egcd可得 MATHJAX-SSR-26</p>
-<p>带入运算，易得 MATHJAX-SSR-27</p>
+<p>则： MATHJAX-SSR-49</p>
+<p>由egcd可得 MATHJAX-SSR-50</p>
+<p>带入运算，易得 MATHJAX-SSR-51</p>
 <blockquote>
 <ol start="3" type="1">
 <li>手动计算
-MATHJAX-SSR-28不允许使用电脑或者其他电子设备。[提示：这是一道看上去与中国剩余定理无关的计算题。]</li>
+MATHJAX-SSR-52不允许使用电脑或者其他电子设备。[提示：这是一道看上去与中国剩余定理无关的计算题。]</li>
 </ol>
 </blockquote>
 <p>解：由提示猜测，221为合数，容易验证221=13*17</p>
-<p>不妨设MATHJAX-SSR-29</p>
-<p>有 MATHJAX-SSR-30</p>
+<p>不妨设MATHJAX-SSR-53</p>
+<p>有 MATHJAX-SSR-54</p>
 <p>可得：</p>
 <p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="74.983ex" height="19.509ex" style="vertical-align: -9.171ex;" viewbox="0 -4451.1 32284 8399.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">\begin{align*}
@@ -614,7 +614,7 @@ MATHJAX-SSR-28不允许使用电脑或者其他电子设备。[提示：这是�
 </g>
 </g>
 </svg></p>
-<p>由egcd易得MATHJAX-SSR-32</p>
+<p>由egcd易得MATHJAX-SSR-56</p>
 <p>不妨设</p>
 <p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="17.6ex" height="2.843ex" style="vertical-align: -0.838ex;" viewbox="0 -863.1 7577.6 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">x \equiv 5 \pmod{13}</title>
@@ -646,8 +646,8 @@ MATHJAX-SSR-28不允许使用电脑或者其他电子设备。[提示：这是�
 </g>
  <use xlink:href="#E1-MJMAIN-29" x="7188" y="0"/>
 </g>
-</svg> MATHJAX-SSR-34</p>
-<p>易得x=5时成立，则有原式： MATHJAX-SSR-35 成立</p>
+</svg> MATHJAX-SSR-58</p>
+<p>易得x=5时成立，则有原式： MATHJAX-SSR-59 成立</p>
 <blockquote>
 <ol start="7" type="1">
 <li>实现一个利用 CRT 求解同余方程的程序（Python 或者 C 语言都可以）。
@@ -755,6 +755,22 @@ MATHJAX-SSR-28不允许使用电脑或者其他电子设备。[提示：这是�
   </div>
 </div>
   
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
